@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ziad's Supplies | Restaurant Essentials</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script defer src="/static/app.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="branding">
+            <h1>Ziad's Supplies</h1>
+            <p>Your one-stop partner for restaurant essentials.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="#catalog">Catalog</a>
+            <a href="#checkout">Checkout</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h2>All the supplies your kitchen and front-of-house need.</h2>
+                <p>
+                    From detergents and tissues to takeaway packaging and hygiene solutions, we deliver dependable inventory for restaurants, cafes and catering hubs.
+                </p>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <strong>24h</strong>
+                    <span>Turnaround on stock orders</span>
+                </div>
+                <div>
+                    <strong>60+</strong>
+                    <span>Curated supply lines</span>
+                </div>
+                <div>
+                    <strong>COD</strong>
+                    <span>Cash-on-delivery checkout</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalog" class="catalog-section">
+            <header>
+                <h2>Product catalog</h2>
+                <p>Tap a category to explore its items. Add what you need to the cart and adjust quantities during checkout.</p>
+            </header>
+            <div id="catalog-grid" class="catalog-grid" aria-live="polite">
+                <p class="loading">Loading the latest catalog...</p>
+            </div>
+        </section>
+
+        <section id="checkout" class="checkout-section">
+            <div class="cart">
+                <h2>Your cart</h2>
+                <ul id="cart-items" class="cart-items">
+                    <li class="empty">Your cart is empty.</li>
+                </ul>
+                <div class="cart-total">
+                    <span>Total (COD)</span>
+                    <strong id="cart-total">0.00</strong>
+                </div>
+            </div>
+
+            <form id="checkout-form" class="checkout-form" novalidate>
+                <h2>Checkout</h2>
+                <p>Cash on delivery only. We will contact you shortly after submission to coordinate dispatch.</p>
+
+                <label>
+                    Full name
+                    <input type="text" name="customerName" required placeholder="e.g. Layla Hassan">
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" required placeholder="e.g. orders@restaurant.com">
+                </label>
+
+                <label>
+                    Phone number
+                    <input type="tel" name="phone" required placeholder="e.g. +961 12 345 678">
+                </label>
+
+                <label>
+                    Delivery address
+                    <textarea name="address" rows="3" required placeholder="Street, city, delivery instructions"></textarea>
+                </label>
+
+                <div class="payment-method">
+                    <span>Payment method</span>
+                    <strong>Cash on Delivery (COD)</strong>
+                </div>
+
+                <button type="submit" class="primary-button">Submit order</button>
+                <p class="form-hint">
+                    A confirmation email with your order summary will be sent right away.
+                </p>
+                <div id="form-messages" class="form-messages" role="status" aria-live="polite"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+        <div>
+            <h3>Contact us</h3>
+            <p>Phone: <a href="tel:+96170123456">+961 70 123 456</a></p>
+            <p>Email: <a href="mailto:hello@ziadsupplies.com">hello@ziadsupplies.com</a></p>
+        </div>
+        <div>
+            <h3>Service hours</h3>
+            <p>Monday - Saturday: 8:00 AM - 6:00 PM</p>
+            <p>Sunday: On-call for emergencies</p>
+        </div>
+        <p class="copyright">
+            &copy; <span id="year"></span> Ziad's Supplies. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
